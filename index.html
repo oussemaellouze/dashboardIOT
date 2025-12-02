@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard IoT</title>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-database-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Dashboard</h1>
+
+    <div id="current-values">
+      <p>🌡️ Température actuelle : <span id="tempValue"></span> °C</p>
+      <p>💧 Humidité actuelle : <span id="humValue"></span> %</p>
+      <p>🔥 Niveau de Gaz : <span id="gasValue"></span></p>
+    </div>
+
+    <h2>Commande Robot</h2>
+
+    <div class="image-container">
+      <img src="maquette.png" class="dashboard-image" />
+    </div>
+
+    <div class="button-container">
+      <button class="btn" id="buttonA">A</button>
+      <button class="btn" id="buttonB">B</button>
+      <button class="btn" id="buttonC">C</button>
+    </div>
+
+    <div class="back-container">
+      <button class="btn" id="backButton">Retour à la place initiale</button>
+    </div>
+
+    <h2>Les métriques</h2>
+    <div class="chart-container">
+      <canvas id="temperatureChart"></canvas>
+      <canvas id="humidityChart"></canvas>
+      <canvas id="gasChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
